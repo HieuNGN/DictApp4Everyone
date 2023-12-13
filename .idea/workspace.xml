@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="411a0a16-a100-46ea-a142-bee7c3cbcca9" name="Changes" comment="add image" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;evergard3n&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5acb1cfe-ab6e-45c3-a15e-e16d83985dfe" />
+        <option name="url" value="https://github.com/HGF-hgf/EnToViDictionary.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2Yr0Oo8Me6Unej4cn4eyP4Cd4xT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/hn655/AppData/Local/SceneBuilder/SceneBuilder.exe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\dictionary\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\dictionary\src\main\resources\com\example\dictionary" />
+      <recent name="D:\java\dictionary\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary.Application" />
+      <module name="dictionary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="411a0a16-a100-46ea-a142-bee7c3cbcca9" name="Changes" comment="" />
+      <created>1701268364003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701268364003</updated>
+      <workItem from="1702440817821" duration="280000" />
+      <workItem from="1702441101801" duration="76000" />
+      <workItem from="1702441180524" duration="212000" />
+      <workItem from="1702441448411" duration="2880000" />
+    </task>
+    <task id="LOCAL-00001" summary="update ui">
+      <option name="closed" value="true" />
+      <created>1701272338900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701272338900</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update game and ui">
+      <option name="closed" value="true" />
+      <created>1701311380178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701311380178</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update suggestion for hangman">
+      <option name="closed" value="true" />
+      <created>1701346926050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701346926050</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update game">
+      <option name="closed" value="true" />
+      <created>1701348850066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701348850066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update game">
+      <option name="closed" value="true" />
+      <created>1701419417009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701419417009</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <option name="closed" value="true" />
+      <created>1701577927834</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701577927834</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1701618881584</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701618881584</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1701619036004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701619036004</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1701619133185</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701619133185</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1701619406546</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701619406546</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1701622112434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701622112434</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix bugs">
+      <option name="closed" value="true" />
+      <created>1701623067188</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701623067188</updated>
+    </task>
+    <task id="LOCAL-00013" summary="finish the dictionary">
+      <option name="closed" value="true" />
+      <created>1701668428866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701668428866</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updated ui">
+      <option name="closed" value="true" />
+      <created>1701787085377</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701787085377</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updated ui">
+      <option name="closed" value="true" />
+      <created>1701787277268</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701787277268</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated ui">
+      <option name="closed" value="true" />
+      <created>1701791330109</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701791330109</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated search word">
+      <option name="closed" value="true" />
+      <created>1701848500917</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848500917</updated>
+    </task>
+    <task id="LOCAL-00018" summary="finish">
+      <option name="closed" value="true" />
+      <created>1701874075385</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874075385</updated>
+    </task>
+    <task id="LOCAL-00019" summary="finish">
+      <option name="closed" value="true" />
+      <created>1701874527075</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874527075</updated>
+    </task>
+    <task id="LOCAL-00020" summary="finish">
+      <option name="closed" value="true" />
+      <created>1701874561311</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874561311</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add image">
+      <option name="closed" value="true" />
+      <created>1701874753675</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874753675</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add image">
+      <option name="closed" value="true" />
+      <created>1701874797017</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874797017</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add image">
+      <option name="closed" value="true" />
+      <created>1701874972156</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701874972156</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update ui" />
+    <MESSAGE value="update game and ui" />
+    <MESSAGE value="update suggestion for hangman" />
+    <MESSAGE value="update game" />
+    <MESSAGE value="update" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="fix bugs" />
+    <MESSAGE value="finish the dictionary" />
+    <MESSAGE value="updated ui" />
+    <MESSAGE value="updated search word" />
+    <MESSAGE value="finish" />
+    <MESSAGE value="add image" />
+    <option name="LAST_COMMIT_MESSAGE" value="add image" />
+  </component>
+</project>
