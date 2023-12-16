@@ -8,7 +8,7 @@ This is a very rudimental version of a dictionary software we've been making in 
 ## Creators
 
  - [Nguyễn Việt Hưng - 22028331](https://github.com/nvhung1807)
- - [Nguyễn Đặng Thành Vinh - 22028157]()
+ - [Nguyễn Đặng Thành Vinh - 22028157](https://github.com/gapdoicanxi)
  - [Nguyễn Đình Nghĩa - 22028320](https://github.com/MiguelWave)
  - [Nguyễn Nho Hiếu - 22028328](https://github.com/HieuNGN) 
 
