@@ -2,14 +2,14 @@ package com.example.dictionary.ui;
 
 import javafx.scene.control.Alert;
 
+/**
+ * For notification and confirmation messages.
+ */
+
 public class Alerts {
 
     /**
-     * This method creates and displays an information alert with the given title and content.
-     * It uses the javafx.scene.control.Alert class to create the alert.
-     *
-     * @param title   The title of the alert.
-     * @param content The content text of the alert.
+     * Creates and displays an information alert.
      */
     public void showAlertInfo(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

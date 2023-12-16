@@ -1,22 +1,13 @@
 package com.example.dictionary.ui;
 
 import com.example.dictionary.Application;
-import com.example.dictionary.core.Dictionary;
-import com.example.dictionary.core.Words;
-import javafx.application.Platform;
+import com.example.dictionary.core.Word;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.web.HTMLEditor;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Objects;
 import java.util.Optional;
 
 import static com.example.dictionary.Application.dictionary;
@@ -44,89 +35,89 @@ public class AddWordController extends SwitchPage {
 
     /**
      * This method is called to initialize a controller after its root element has been completely processed.
-     * It sets the 'successAlert' visibility to false.
+     * Sets the 'successAlert' visibility to false.
      */
     @FXML
     private void initialize() {
-        // Set focus on the wordTextField
+        // Hides the success alert
         successAlert.setVisible(false);
     }
 
     /**
-     * This method is called when the save button is clicked in the GUI.
-     * It shows a confirmation alert and, if the user confirms, gets the input data and processes it.
-     * If the entered word already exists in the dictionary, it shows another alert asking if the user wants to replace the existing meaning.
-     * If the user confirms, it updates the word in the dictionary. If the user cancels, it shows an information alert.
-     * If the entered word does not exist in the dictionary, it inserts the word into the dictionary and shows a success alert.
-     * After processing the input, it resets the input fields and disables the save button for a short time.
-     *
+     * Called when the save button is clicked in the GUI.
+     * Gets info from user input fields and process their addition to the dictionary.
      * @param event The ActionEvent object representing the button click event.
      */
     @FXML
     public void setSaveButton(ActionEvent event) {
-        Alert alertConfirmation = alerts.alertConfirmation("Add word",
-                "Bạn chắc chắn muốn thêm từ này?");
+        // Addition confirmation
+        Alert alertConfirmation = alerts.alertConfirmation("Add word", "Bạn chắc chắn muốn thêm từ này?");
         Optional<ButtonType> option = alertConfirmation.showAndWait();
-        // get data from input
+
+        // Get data from input
         String target = wordTextField.getText();
         byte[] pText = htmlEditor.getHtmlText().getBytes(StandardCharsets.UTF_8);
         String meaning = new String(pText, StandardCharsets.UTF_8);
-        meaning =
-                meaning.replace(
-                        "<html dir=\"ltr\"><head></head><body contenteditable=\"true\">", "");
+
+        // Clean up string
+        meaning = meaning.replace("<html dir=\"ltr\"><head></head><body contenteditable=\"true\">", "");
         meaning = meaning.replace("</body></html>", "");
 
-        if (option.get() == ButtonType.OK) {
-            Words word = new Words(target, meaning);
+        if (option.get() == ButtonType.OK) { // User wants to add word
+            Word word = new Word(target, meaning);
             String w = dictionary.search(target);
-            if (!w.equals("<h1 style=\"text-align: center;\">No word found</h1>")) {
-                // find index of word in dictionary
+            if (!w.equals("<h1 style=\"text-align: center;\">No word found</h1>")) {// In case of collision
 
-                // show confirmation alert
+                // Replacement confirmation
                 Alert selectionAlert = alerts.alertConfirmation("This word already exists",
-                        "Từ này đã tồn tại.\n" +
-                                "Bạn có muốn thay thế nghĩa cũ bằng nghĩa mới không?");
-                // custom button
+                        "Từ này đã tồn tại.\n" + "Bạn có muốn thay thế nghĩa cũ bằng nghĩa mới không?");
+
+                // Custom buttons
                 selectionAlert.getButtonTypes().clear();
-                ButtonType replaceBtn = new ButtonType("Thay thế");
-                selectionAlert.getButtonTypes().addAll(replaceBtn, ButtonType.CANCEL);
+                selectionAlert.getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
                 Optional<ButtonType> selection = selectionAlert.showAndWait();
 
-                if (selection.get() == replaceBtn) {
-                    // replace old meaning, replace this with sqlite later
+                if (selection.get() == ButtonType.OK) {
+                    // User wants to replace
                     Application.dictionary.update(target, meaning);
+                    showSuccessAlert();
                 }
-                if (selection.get() == ButtonType.CANCEL) {
-                    alerts.showAlertInfo("Information", "Thay đổi không được công nhận.");
-                }
-            } else {
+            } else { // No collision
                 dictionary.insert(target, meaning);
-                // succeed
                 showSuccessAlert();
             }
-            // reset input
-            saveButton.setDisable(true);
-            Dictionary.setTimeout(() -> saveButton.setDisable(false), 1500);
+
+            // Clean up input fields
             wordTextField.setText("");
             htmlEditor.setHtmlText("");
-
-        } else if (option.get() == ButtonType.CANCEL) {
+        } else if (option.get() == ButtonType.CANCEL) { // User doesnt want to add word
             alerts.showAlertInfo("Information", "Thay đổi không được công nhận.");
         }
     }
 
 
     /**
-     * This method shows a success alert in the GUI.
-     * It sets the 'successAlert' visibility to true, and then sets it back to false after a short delay.
+     * Shows the success alert, then hides it after a certain delay.
      */
     private void showSuccessAlert() {
         successAlert.setVisible(true);
         // automatic hide success alert
-        Dictionary.setTimeout(() -> successAlert.setVisible(false), 1500);
+        runAfterDelay(() -> successAlert.setVisible(false), 1500);
     }
 
-    public void toggleDarkMode(ActionEvent actionEvent) {
-
+    /**
+     * Runs the designated runnable after delay
+     * @param runnable
+     * @param delay
+     */
+    public static void runAfterDelay(Runnable runnable , int delay ) {
+        new Thread(() -> {
+            try {
+                Thread.sleep(delay);
+                runnable.run();
+            } catch (Exception e) {
+                System.err.println(e);
+            }
+        }).start();
     }
 }

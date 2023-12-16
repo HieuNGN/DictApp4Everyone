@@ -1,9 +1,8 @@
 package com.example.dictionary.ui;
 
 import com.example.dictionary.Application;
-import com.example.dictionary.core.DictionaryB;
 import com.example.dictionary.core.DictionaryManagement;
-import com.example.dictionary.core.Words;
+import com.example.dictionary.core.Word;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -33,16 +32,16 @@ public class MultipleChoiceController implements Initializable {
     private Button choice1, choice2, choice3, choice4, returnBtn, nextBtn;
     private boolean checking = false, correctAns;
     private ArrayList<Button> b = new ArrayList<>();
-    private DictionaryB dict = new DictionaryB();
+    private ArrayList<Word> data = new ArrayList<>();
     private DictionaryManagement dictm = new DictionaryManagement();
 
 
-    private HashSet<Words> previousAnswers = new HashSet<>();
+    private HashSet<Word> previousAnswers = new HashSet<>();
 
     /**
      * This method is called to initialize a controller after its root element has been completely processed.
      * It sets up the action handlers for the 'returnBtn', 'choice1', 'choice2', 'choice3', 'choice4', and 'nextBtn' buttons.
-     * The 'returnBtn' handler loads a new scene from the 'MultipleChoiceHelper.fxml' file and sets it on the current stage.
+     * The 'returnBtn' handler loads a new scene from the 'GamePage.fxml' file and sets it on the current stage.
      * The 'choice' handlers check the answer if the 'checking' flag is false.
      * The 'nextBtn' handler sets the next button text and displays the next question.
      * It also adds the choice buttons to the 'b' list and inserts data from a file into the 'dict' dictionary.
@@ -56,11 +55,12 @@ public class MultipleChoiceController implements Initializable {
         b.add(choice2);
         b.add(choice3);
         b.add(choice4);
-        dictm.insertFromFileSpecial("src/dictionaries.txt", dict);
+        DictionaryManagement.importFromFile("src/dictionaries.txt");
+        data = DictionaryManagement.words;;
         returnBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                String path = "fxml/MultipleChoiceHelper.fxml";
+                String path = "fxml/GamePage.fxml";
                 try {
                     FXMLLoader loader = new FXMLLoader(Application.class.getResource(path));
                     Stage stage = (Stage) returnBtn.getScene().getWindow();
@@ -139,9 +139,9 @@ public class MultipleChoiceController implements Initializable {
      * It uses the 'previousAnswers' set to make sure that the same word is not displayed twice in a row.
      */
     private void generateQuestion() {
-        Words w = dict.get(getRandomIndex(dict.size()));
+        Word w = data.get(getRandomIndex(data.size()));
         while (previousAnswers.contains(w)) {
-            w = dict.get(getRandomIndex(dict.size()));
+            w = data.get(getRandomIndex(data.size()));
         }
         previousAnswers.add(w);
         defination = w.getMeaning();
@@ -164,12 +164,12 @@ public class MultipleChoiceController implements Initializable {
             b.get(i).setText(answer);
             for (int j = 0; j < 4; j++) {
                 if (j != i) {
-                    int randIndex = getRandomIndex(dict.size());
+                    int randIndex = getRandomIndex(data.size());
                     while (thisQuestionChoices.contains(randIndex)) {
-                        randIndex = getRandomIndex(dict.size());
+                        randIndex = getRandomIndex(data.size());
                     }
                     thisQuestionChoices.add(randIndex);
-                    b.get(j).setText(dict.get(randIndex).getWord());
+                    b.get(j).setText(data.get(randIndex).getWord());
                 }
             }
         } else {
@@ -188,7 +188,7 @@ public class MultipleChoiceController implements Initializable {
                 scoreLabel.setVisible(true);
                 displayQuestion();
             } else {
-                String path = "fxml/MultipleChoiceHelper.fxml";
+                String path = "fxml/GamePage.fxml";
                 try {
                     FXMLLoader loader = new FXMLLoader(Application.class.getResource(path));
                     Stage stage = (Stage) returnBtn.getScene().getWindow();

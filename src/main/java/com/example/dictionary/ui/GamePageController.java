@@ -10,14 +10,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class GamePageController extends SwitchPage implements Initializable {
     @FXML
-    private Button btnHangman;
-    @FXML
-    private Button btnMultipleChoice;
+    private Button gameBtn;
 
     /**
      * This method is called to initialize a controller after its root element has been completely processed.
@@ -30,29 +29,18 @@ public class GamePageController extends SwitchPage implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btnHangman.setOnAction(new EventHandler<ActionEvent>() {
+        gameBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                String path = "fxml/MultipleChoiceGUI.fxml";
                 try {
-                    FXMLLoader loader = new FXMLLoader(Application.class.getResource("fxml/HangMan.fxml"));
-                    Stage stage = (Stage) btnHangman.getScene().getWindow();
+                    FXMLLoader loader = new FXMLLoader(Application.class.getResource(path));
+                    Stage stage = (Stage) gameBtn.getScene().getWindow();
                     Scene scene = new Scene(loader.load());
                     stage.setScene(scene);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
 
-        btnMultipleChoice.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    FXMLLoader loader = new FXMLLoader(Application.class.getResource("fxml/MultipleChoiceHelper.fxml"));
-                    Stage stage = (Stage) btnMultipleChoice.getScene().getWindow();
-                    Scene scene = new Scene(loader.load());
-                    stage.setScene(scene);
-                } catch (Exception e) {
+
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

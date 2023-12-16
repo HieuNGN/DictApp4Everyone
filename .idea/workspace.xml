@@ -66,7 +66,7 @@
     "Application.Application.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/hn655/AppData/Local/SceneBuilder/SceneBuilder.exe",
@@ -111,6 +111,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -123,6 +130,7 @@
       <workItem from="1702441101801" duration="76000" />
       <workItem from="1702441180524" duration="212000" />
       <workItem from="1702441448411" duration="2880000" />
+      <workItem from="1702713039581" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="update ui">
       <option name="closed" value="true" />
