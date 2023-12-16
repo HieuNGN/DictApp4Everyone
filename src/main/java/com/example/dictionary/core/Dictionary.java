@@ -10,7 +10,7 @@ public abstract class Dictionary {
     public void close() {
     }
 
-    public abstract ArrayList<Words> getAllWords();
+    public abstract ArrayList<Word> getAllWords();
 
     public abstract ArrayList<String> getWords();
 
@@ -21,14 +21,5 @@ public abstract class Dictionary {
     public abstract boolean delete(final String word);
 
     public abstract boolean update(final String word, final String meaning);
-    public static void setTimeout( Runnable runnable , int delay ) {
-        new Thread(() -> {
-            try {
-                Thread.sleep(delay);
-                runnable.run();
-            } catch (Exception e) {
-                System.err.println(e);
-            }
-        }).start();
-    }
+
 }

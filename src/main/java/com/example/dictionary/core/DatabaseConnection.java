@@ -24,7 +24,6 @@ public class DatabaseConnection extends Dictionary {
      *
      * @param conn Connection variable
      */
-
     private static void close(Connection conn) {
         try {
             if (conn != null) {
@@ -34,7 +33,6 @@ public class DatabaseConnection extends Dictionary {
             e.printStackTrace();
         }
     }
-
 
     /**
      * Close PreparedStatement.
@@ -73,13 +71,13 @@ public class DatabaseConnection extends Dictionary {
      * @return ArrayList of Words
      * @throws SQLException exception
      */
-    private ArrayList<Words> getWordsFromDB(PreparedStatement ps) throws SQLException {
+    private ArrayList<Word> getWordsFromDB(PreparedStatement ps) throws SQLException {
         try {
             ResultSet rs = ps.executeQuery();
             try {
-                ArrayList<Words> words = new ArrayList<>();
+                ArrayList<Word> words = new ArrayList<>();
                 while (rs.next()) {
-                    words.add(new Words(rs.getString("word"), rs.getString("html")));
+                    words.add(new Word(rs.getString("word"), rs.getString("html")));
                 }
                 return words;
             } finally {
@@ -233,7 +231,7 @@ public class DatabaseConnection extends Dictionary {
      * @return an 'ArrayList(Word)' include all the words from the database
      */
     @Override
-    public ArrayList<Words> getAllWords() { // Method to get all Words objects from the 'av' table in the database.
+    public ArrayList<Word> getAllWords() { // Method to get all Words objects from the 'av' table in the database.
         final String query = "SELECT * FROM av"; // SQL query to select all rows from the 'av' table.
         try {
             PreparedStatement ps = con.prepareStatement(query); // Prepare the SQL query.

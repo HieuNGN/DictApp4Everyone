@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class Trie {
     private static final ArrayList<String> searchedWords = new ArrayList<>();
-    private static final TrieNode root = new TrieNode();
+    private static final Node root = new Node();
 
     public static ArrayList<String> getSearchedWords() {
         return searchedWords;
@@ -19,12 +19,12 @@ public class Trie {
      */
     public static void insert(String word) {
         // current node
-        TrieNode current = root;
+        Node current = root;
         for (int i = 0; i < word.length(); ++i) {
             char ch = word.charAt(i);
             // if the character is not in the trie, add it
             if (current.children.get(ch) == null) {
-                current.children.put(ch, new TrieNode());
+                current.children.put(ch, new Node());
             }
             // move to the next node
             current = current.children.get(ch);
@@ -38,7 +38,7 @@ public class Trie {
      *
      * @param word the word to be searched
      */
-    private static void dfs(TrieNode current, String word) {
+    private static void dfs(Node current, String word) {
         // if the current node is the end of the word, add it to the list
         if (current.isEndOfWord) {
             searchedWords.add(word);
@@ -64,7 +64,7 @@ public class Trie {
             return new ArrayList<>();
         }
         searchedWords.clear();
-        TrieNode current = root;
+        Node current = root;
         for (int i = 0; i < prefix.length(); ++i) {
             char ch = prefix.charAt(i);
             // if the character is not in the trie, return an empty list
@@ -83,7 +83,7 @@ public class Trie {
      * @param word the word to be deleted
      */
     public static void delete(String word) {
-        TrieNode current = root;
+        Node current = root;
 
         for (int i = 0; i < word.length(); ++i) {
             char ch = word.charAt(i);
@@ -102,12 +102,11 @@ public class Trie {
     /**
      * A node in the trie
      */
-    public static class TrieNode {
-        Map<Character, TrieNode> children = new TreeMap<>();
-
+    public static class Node {
+        Map<Character, Node> children = new TreeMap<>();
         boolean isEndOfWord;
 
-        public TrieNode() {
+        public Node() {
             isEndOfWord = false;
         }
     }

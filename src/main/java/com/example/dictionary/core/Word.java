@@ -1,10 +1,10 @@
 package com.example.dictionary.core;
 
-public class Words {
+public class Word {
     private String word;
     private String meaning;
 
-    public Words(String word, String meaning) {
+    public Word(String word, String meaning) {
         this.word = word;
         this.meaning = meaning;
     }

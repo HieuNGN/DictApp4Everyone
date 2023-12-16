@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class DictionaryManagement extends Dictionary {
 
-    private static final ArrayList<Words> words = new ArrayList<>();
+    public static ArrayList<Word> words = new ArrayList<>();
 
     /**
      * Get all words in the dictionary.
@@ -15,7 +15,7 @@ public class DictionaryManagement extends Dictionary {
      * @return ArrayList of Word
      */
     @Override
-    public ArrayList<Words> getAllWords() {
+    public ArrayList<Word> getAllWords() {
         return words;
     }
 
@@ -27,11 +27,38 @@ public class DictionaryManagement extends Dictionary {
     @Override
     public ArrayList<String> getWords() {
         ArrayList<String> result = new ArrayList<>();
-        for (Words w : words) {
+        for (Word w : words) {
             String target = w.getWord();
             result.add(target);
         }
         return result;
+    }
+
+    /**
+     * Load data from file.
+     *
+     * @param src the path to the file
+     */
+    public static void importFromFile (String src) {
+        try {
+            File file = new File(src);
+            Scanner scnF = new Scanner(file);
+            while (scnF.hasNextLine()) {
+                String line = scnF.nextLine();
+
+                String[] stack = line.split("\\t");
+                if(stack.length == 2) {
+                    Word newWord = new Word(stack[0],stack[1]);
+                    words.add(newWord);
+                }
+                else {
+                    System.err.println("Invalid line format: " + line);
+                }
+            }
+            scnF.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -43,7 +70,7 @@ public class DictionaryManagement extends Dictionary {
     @Override
     public String search(final String word) {
 
-        for (Words w : words) {
+        for (Word w : words) {
             if (w.getWord().equals(word)) {
                 return w.getMeaning();
             }
@@ -60,12 +87,12 @@ public class DictionaryManagement extends Dictionary {
      */
     @Override
     public boolean insert(final String word, final String meaning) {
-        for (Words w : words) {
+        for (Word w : words) {
             if (w.getWord().equals(word)) {
                 return false;
             }
         }
-        Words w = new Words(word, meaning);
+        Word w = new Word(word, meaning);
         words.add(w);
         Trie.insert(word);
         return true;
@@ -98,40 +125,12 @@ public class DictionaryManagement extends Dictionary {
      */
     @Override
     public boolean update(final String word, final String meaning) {
-        for (Words w : words) {
+        for (Word w : words) {
             if (w.getWord().equals(word)) {
                 w.setMeaning(meaning);
                 return true;
             }
         }
         return false;
-    }
-
-    /**
-     * Load data from file.
-     *
-     * @param src the path to the file
-     */
-    public void insertFromFileSpecial (String src, DictionaryB dict) {
-        try {
-            File file = new File(src);
-            Scanner scnF = new Scanner(file);
-            while (scnF.hasNextLine()) {
-                String line = scnF.nextLine();
-
-                String[] stack = line.split("\\t");
-                if(stack.length == 2) {
-                    Words newWord = new Words(stack[0],stack[1]);
-                    dict.add(newWord);
-
-                }
-                else {
-                    System.err.println("Invalid line format: " + line);
-                }
-            }
-            scnF.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 }
