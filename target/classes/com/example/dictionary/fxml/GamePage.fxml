@@ -12,36 +12,36 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="850.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.ui.GamePageController">
    <children>
-      <Pane layoutX="59.0" prefHeight="550.0" prefWidth="792.0" style="-fx-border-radius: 10px; -fx-background-color: #ffffff; -fx-background-radius: 10px;" styleClass="search-box" stylesheets="@../style.css">
+      <Pane layoutX="61.0" prefHeight="550.0" prefWidth="792.0" style="-fx-border-radius: 10px; -fx-background-color: #ffffff; -fx-background-radius: 10px;" styleClass="search-box" stylesheets="@../style.css">
          <children>
-            <Text layoutX="14.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiple Choice Questions" wrappingWidth="271.7366943359375">
+            <Text layoutX="14.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiple Choice Questions" wrappingWidth="271.7366943359375">
                <font>
                   <Font name="Google Sans Bold" size="22.0" />
                </font>
             </Text>
-            <Pane layoutY="-6.0" prefHeight="98.0" prefWidth="792.0" styleClass="container" stylesheets="@../style.css">
+            <Pane layoutY="14.0" prefHeight="98.0" prefWidth="792.0" styleClass="container-dropshadow" stylesheets="@../style.css">
                <children>
-                  <Text fill="#2a4878" layoutX="324.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="container" text="Games" textAlignment="CENTER" wrappingWidth="144.8409423828125">
+                  <Text fill="#2a4878" layoutX="324.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="container" text="Game" textAlignment="CENTER" wrappingWidth="144.8409423828125">
                      <font>
-                        <Font name="System Bold" size="30.0" />
+                        <Font name="System Bold" size="32.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-            <Button fx:id="gameBtn" layoutX="637.0" layoutY="506.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="add-button" stylesheets="@../style.css" text="Chơi thôi!" />
-            <Pane layoutX="131.0" layoutY="180.0" prefHeight="190.0" prefWidth="530.0" styleClass="container-dropshadow" stylesheets="@../style.css">
+            <Button fx:id="gameBtn" layoutX="637.0" layoutY="506.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" styleClass="add-button" stylesheets="@../style.css" text="I'm ready" />
+            <Pane layoutX="131.0" layoutY="213.0" prefHeight="190.0" prefWidth="530.0" styleClass="container-dropshadow" stylesheets="@../style.css">
                <children>
-                  <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trò chơi chọn từ tiếng Anh từ nghĩa tiếng Việt là thách thức tuyệt vời, giúp cải thiện từ vựng và kỹ năng ngôn ngữ hiệu quả." textAlignment="JUSTIFY" wrappingWidth="307.73675537109375">
+                  <Text layoutX="208.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a perfect game that will test your knowledge of the English Language. Its purpose also exceed that of game, it is also something you would see in a real test " textAlignment="JUSTIFY" wrappingWidth="307.73675537109375">
                      <font>
                         <Font name="Google Sans Regular" size="12.0" />
                      </font>
                   </Text>
-                  <Text layoutX="14.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trò chơi bắt đầu bằng việc hiển thị từ tiếng Việt, người chơi phải chọn từ tiếng Anh tương đương trong 4 lựa chọn được đưa ra. Có tất cả 5 câu hỏi, và bạn sẽ thua nếu trả lời sai cả 5. Chúc may mắn!" textAlignment="JUSTIFY" wrappingWidth="307.73675537109375">
+                  <Text layoutX="208.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The game starts with providing you a word in Vietnamese together with 4 choices you have to make, which are in English. Choose wisely as each correct answer grants you a point or a score. Have fun and don't forget to study new vocab everyday" textAlignment="JUSTIFY" wrappingWidth="307.73675537109375">
                      <font>
                         <Font name="Google Sans Regular" size="12.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="150.0" fitWidth="162.0" layoutX="354.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="162.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/multiplechoices.jpg" />
                      </image>
@@ -50,11 +50,6 @@
             </Pane>
          </children>
       </Pane>
-      <ImageView fitHeight="52.0" fitWidth="38.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../icon/dictionary.png" />
-         </image>
-      </ImageView>
       <Button layoutX="7.0" layoutY="128.0" mnemonicParsing="false" onAction="#setSearchButton" prefHeight="45.0" prefWidth="45.0" styleClass="menu-item" stylesheets="@../style.css" textFill="WHITE">
          <tooltip>
             <Tooltip text="Search word" />
@@ -91,7 +86,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="exitButton" layoutX="13.0" layoutY="491.0" mnemonicParsing="false" onAction="#setExitButton" prefHeight="45.0" prefWidth="45.0" styleClass="exit-button" stylesheets="@../style.css">
+      <Button fx:id="exitButton" layoutX="8.0" layoutY="490.0" mnemonicParsing="false" onAction="#setExitButton" prefHeight="45.0" prefWidth="45.0" styleClass="exit-button" stylesheets="@../style.css">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -118,6 +113,15 @@
             <String fx:value="selected-border" />
             <String fx:value="menu-item" />
          </styleClass>
+      </Button>
+      <Button layoutX="-1.0" layoutY="14.0" mnemonicParsing="false" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0">
+               <image>
+                  <Image url="@../icon/night-mode.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>

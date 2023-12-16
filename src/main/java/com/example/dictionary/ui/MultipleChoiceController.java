@@ -178,7 +178,7 @@ public class MultipleChoiceController implements Initializable {
             if (score == 5) {
                 questionLabel.setText("Perfect! Your score: " + score);
             }
-            Alert playAgainAlert = alerts.alertConfirmation("Play again?", "Do you want to play again?");
+            Alert playAgainAlert = alerts.alertConfirmation("Play again?", "Wanna have some more fun?");
             Optional<ButtonType> selection = playAgainAlert.showAndWait();
             if (selection.get() == ButtonType.OK) {
                 score = 0;
@@ -271,9 +271,9 @@ public class MultipleChoiceController implements Initializable {
      */
     private void setNextBtnText() {
         if (checking) {
-            nextBtn.setText("Tiếp tục");
+            nextBtn.setText("Next");
         } else {
-            nextBtn.setText("Bỏ qua");
+            nextBtn.setText("Skip");
         }
         if (questionIndex > numberOfQuestions) {
             nextBtn.setDisable(true);

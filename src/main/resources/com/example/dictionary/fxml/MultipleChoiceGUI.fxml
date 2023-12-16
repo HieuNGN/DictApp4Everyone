@@ -25,11 +25,6 @@
       </Label>
       <Pane layoutY="2.0" prefHeight="94.0" prefWidth="850.0" styleClass="container-dropshadow" stylesheets="@../style.css">
          <children>
-            <ImageView fitHeight="62.0" fitWidth="203.0" layoutX="633.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons/logo.png" />
-               </image>
-            </ImageView>
             <Text fill="#2a4878" layoutX="50.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return" wrappingWidth="144.8409423828125">
                <font>
                   <Font name="System Bold" size="30.0" />

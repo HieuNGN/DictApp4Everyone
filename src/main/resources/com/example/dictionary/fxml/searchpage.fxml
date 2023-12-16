@@ -17,11 +17,6 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.ui.SearchController">
     <Pane prefHeight="550.0" prefWidth="850.0" styleClass="root" stylesheets="@../style.css">
       <children>
-         <ImageView fitHeight="52.0" fitWidth="38.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../icon/dictionary.png" />
-            </image>
-         </ImageView>
              <Button layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" stylesheets="@../style.css" textFill="WHITE">
             <tooltip>
                <Tooltip text="Search word" />
@@ -64,7 +59,7 @@
          </Button>
          <Pane layoutX="59.0" prefHeight="550.0" prefWidth="792.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;" styleClass="search-box" stylesheets="@../style.css">
             <children>
-                    <TextField fx:id="searchField" layoutX="14.0" layoutY="45.0" onAction="#searchWord" onKeyTyped="#getResults" onMouseClicked="#setClickOnTextField" prefHeight="38.0" prefWidth="522.0" promptText="Search" styleClass="search-box" stylesheets="@../style.css" />
+                    <TextField fx:id="searchField" layoutX="135.0" layoutY="42.0" onAction="#searchWord" onKeyTyped="#getResults" onMouseClicked="#setClickOnTextField" prefHeight="38.0" prefWidth="522.0" promptText="Search" styleClass="search-box" stylesheets="@../style.css" />
                <ListView fx:id="resultsList" layoutX="14.0" layoutY="128.0" onKeyPressed="#selectEnter" onMouseClicked="#selectClick" prefHeight="406.0" prefWidth="264.0" styleClass="list-cell" stylesheets="@../style.css" />
                <Pane layoutX="289.0" layoutY="128.0" prefHeight="405.0" prefWidth="491.0" styleClass="definition-wrapper" stylesheets="@../style.css">
                   <children>
@@ -77,7 +72,7 @@
                            <Insets left="5.0" />
                         </padding>
                      </Label>
-                     <Button fx:id="deleteWordButton" layoutX="81.0" layoutY="360.0" mnemonicParsing="false" onAction="#setDeleteWordButton" prefHeight="32.0" prefWidth="60.0" styleClass="delete-button" stylesheets="@../style.css" textFill="WHITE">
+                     <Button fx:id="deleteWordButton" layoutX="84.0" layoutY="360.0" mnemonicParsing="false" onAction="#setDeleteWordButton" prefHeight="32.0" prefWidth="60.0" styleClass="delete-button" stylesheets="@../style.css" textFill="WHITE">
                         <graphic>
                            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                               <image>
@@ -107,7 +102,7 @@
                </Pane>
             </children>
          </Pane>
-         <Button fx:id="exitButton" layoutX="13.0" layoutY="491.0" mnemonicParsing="false" onAction="#setExitButton" prefHeight="45.0" prefWidth="45.0" styleClass="exit-button" stylesheets="@../style.css">
+         <Button fx:id="exitButton" layoutX="7.0" layoutY="491.0" mnemonicParsing="false" onAction="#setExitButton" prefHeight="45.0" prefWidth="45.0" styleClass="exit-button" stylesheets="@../style.css">
             <graphic>
                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                   <image>
@@ -127,6 +122,15 @@
                <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../icon/joystick.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button layoutX="-1.0" layoutY="14.0" mnemonicParsing="false" textFill="WHITE">
+            <graphic>
+               <ImageView fitHeight="45.0" fitWidth="45.0">
+                  <image>
+                     <Image url="@../icon/night-mode.png" />
                   </image>
                </ImageView>
             </graphic>
