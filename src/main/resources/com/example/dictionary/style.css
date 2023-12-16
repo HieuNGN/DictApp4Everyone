@@ -8,7 +8,7 @@
     -fx-border-radius: 5;
 }
 .container{
-    -fx-background-color: #white;
+    -fx-background-color: #fff;
     -fx-background-radius: 5;
     -fx-border-radius: 5;
 }
@@ -47,10 +47,10 @@
     -fx-effect: dropshadow(three-pass-box, #737272, 15, 0, 0, 2) ;
 }
 .search-box-add {
-    -fx-background-color: white;
+    -fx-background-color: #fff;
     -fx-background-radius: 30;
     -fx-border-radius: 30;
-    -fx-border-color: #black;
+    -fx-border-color: #000;
 }
 
 .search-field{
@@ -266,7 +266,7 @@
 }
 /* translate component */
 .header-translate{
-    -fx-border-color: #white;
+    -fx-border-color: #fff;
     -fx-border-width: 0.5;
     -fx-background-radius: 7 7 7 7;
     -fx-border-radius: 7 7 7 7;
@@ -334,8 +334,3 @@
     .gradient-button:active {
       background: linear-gradient(to right, #45a049, #4CAF50);
       }
-
-.dark-mode:pressed{
-    search-box:-fx-background-color: #000000;
-}
-

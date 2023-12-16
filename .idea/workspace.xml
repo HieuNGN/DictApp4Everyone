@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="411a0a16-a100-46ea-a142-bee7c3cbcca9" name="Changes" comment="add image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dict_hh.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/dict_hh.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Trie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/AddWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/AddWord.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/DeleteWord.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/GGTranslate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/GGTranslate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/GamePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/GamePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/MultipleChoiceGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/MultipleChoiceGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/SynonymAntonym.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/searchpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/searchpage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dictionary/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/images/Diagram.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
