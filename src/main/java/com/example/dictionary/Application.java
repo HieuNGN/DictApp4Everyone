@@ -67,10 +67,5 @@ public class Application extends javafx.application.Application {
             System.out.println("Error loading dictionary");
         }
     }
-
-    public static void main(String[] args) {
-        History.loadHistory();
-        History.getHistory().clear();
-        launch(args);
-    }
 }
+
