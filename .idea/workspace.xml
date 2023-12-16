@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="411a0a16-a100-46ea-a142-bee7c3cbcca9" name="Changes" comment="add image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dictionary/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/searchpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/searchpage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/DictionaryB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/DictionaryManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/DictionaryManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/History.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Trie$TrieNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/core/Trie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/HangMan.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/fxml/MultipleChoiceHelper.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/AddWordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/AddWordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/Alerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/Alerts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/DarkModeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/DarkModeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/GamePageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/GamePageController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/GamePageController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/GamePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/GamePageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/HangManController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/HangManGUIController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceHelper$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceHelper$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/MultipleChoiceHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/SearchController$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/SearchController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dictionary/ui/SearchController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +141,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-657b72ed" />
       </set>
     </attachedChunks>
   </component>

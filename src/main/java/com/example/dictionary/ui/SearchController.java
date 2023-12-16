@@ -71,15 +71,15 @@ public class SearchController extends SwitchPage {
      * Does NOT display definitions.
      */
     public void getResults() {
-        // Clears the resultsList
+        // Clear the resultsList
         resultsList.getItems().clear();
         resultsList.setVisible(true);
 
-        // Searches for results
+        // Search for list of results
         String word = searchField.getText();
         ArrayList<String> results = Trie.search(word);
 
-        // Displays results
+        // Display results
         for (String w : results) {
             resultsList.getItems().add(w);
         }

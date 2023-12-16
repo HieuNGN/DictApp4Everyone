@@ -76,19 +76,10 @@
                   </Pane>
                   <Pane layoutX="45.0" layoutY="136.0" prefHeight="83.0" prefWidth="702.0" style="-fx-border-radius: 10px;" styleClass="selected-border-full" stylesheets="@../style.css">
                      <children>
-                        <Label layoutX="22.0" layoutY="29.0" text="Vocab" textFill="#2a4878">
+                        <TextField fx:id="wordTextField" layoutX="17.0" layoutY="10.0" prefHeight="64.0" prefWidth="668.0" promptText="New word here" styleClass="search-box-add" stylesheets="@../style.css">
                            <font>
-                              <Font name="Google Sans Bold" size="16.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../icons/word.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                        <TextField fx:id="wordTextField" layoutX="117.0" layoutY="20.0" prefHeight="44.0" prefWidth="572.0" promptText="Enter an English" styleClass="search-box-add" stylesheets="@../style.css" />
+                              <Font size="18.0" />
+                           </font></TextField>
                      </children>
                   </Pane>
                   <Pane layoutX="45.0" layoutY="237.0" prefHeight="273.0" prefWidth="702.0" style="-fx-border-radius: 10px;" styleClass="selected-border-full" stylesheets="@../style.css">

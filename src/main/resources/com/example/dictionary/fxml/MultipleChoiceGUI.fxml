@@ -6,43 +6,35 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="498.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.ui.MultipleChoiceController">
+<AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.ui.MultipleChoiceController">
    <children>
-      <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="23.0" layoutY="136.0" prefHeight="46.0" prefWidth="570.0" styleClass="title" stylesheets="@../style.css" text="Test" textFill="#2a4878">
+      <Label fx:id="questionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="134.0" prefHeight="46.0" prefWidth="804.0" styleClass="title" stylesheets="@../style.css" text="Test" textAlignment="CENTER" textFill="#2a4878">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Button fx:id="choice1" layoutX="344.0" layoutY="320.0" prefHeight="87.0" prefWidth="174.0" styleClass="edit-button" stylesheets="@../style.css" />
-      <Button fx:id="choice2" layoutX="102.0" layoutY="320.0" prefHeight="87.0" prefWidth="174.0" styleClass="edit-button" stylesheets="@../style.css" />
-      <Button fx:id="choice3" layoutX="344.0" layoutY="209.0" prefHeight="87.0" prefWidth="174.0" styleClass="edit-button" stylesheets="@../style.css" />
-      <Button fx:id="choice4" layoutX="102.0" layoutY="209.0" prefHeight="87.0" prefWidth="174.0" styleClass="edit-button" stylesheets="@../style.css" />
-      <Button fx:id="nextBtn" layoutX="485.0" layoutY="425.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../style.css" text="Next" />
-      <Label fx:id="scoreLabel" layoutX="518.0" layoutY="96.0" prefHeight="26.0" prefWidth="79.0" text=" Score">
+      <Button fx:id="nextBtn" layoutX="727.0" layoutY="506.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../style.css" text="Next" />
+      <Label fx:id="scoreLabel" layoutX="757.0" layoutY="96.0" prefHeight="26.0" prefWidth="79.0" text=" Score">
          <font>
             <Font name="Google Sans Bold" size="13.0" />
          </font>
       </Label>
-      <Pane layoutX="-3.0" prefHeight="94.0" prefWidth="620.0" styleClass="container-dropshadow" stylesheets="@../style.css">
+      <Pane layoutY="2.0" prefHeight="94.0" prefWidth="850.0" styleClass="container-dropshadow" stylesheets="@../style.css">
          <children>
-            <ImageView fitHeight="62.0" fitWidth="203.0" layoutX="403.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="62.0" fitWidth="203.0" layoutX="633.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/logo.png" />
                </image>
             </ImageView>
-            <Text fill="#2a4878" layoutX="50.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Games" wrappingWidth="144.8409423828125">
+            <Text fill="#2a4878" layoutX="50.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return" wrappingWidth="144.8409423828125">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Text>
-            <Button fx:id="btnReturn" layoutX="7.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="36.0" styleClass="container" stylesheets="@../style.css" textFill="#2a4878">
-               <font>
-                  <Font name="Google Sans Bold" size="12.0" />
-               </font>
-            </Button>
             <Button fx:id="returnBtn" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="36.0" styleClass="container" stylesheets="@../style.css" textFill="#2a4878">
                <font>
                   <Font name="Google Sans Bold" size="12.0" />
@@ -57,5 +49,13 @@
             </Button>
          </children>
       </Pane>
+      <VBox layoutX="23.0" layoutY="209.0" prefHeight="267.0" prefWidth="804.0">
+         <children>
+            <Button fx:id="choice4" prefHeight="66.0" prefWidth="811.0" styleClass="edit-button" stylesheets="@../style.css" />
+            <Button fx:id="choice3" prefHeight="72.0" prefWidth="813.0" styleClass="edit-button" stylesheets="@../style.css" />
+            <Button fx:id="choice2" prefHeight="76.0" prefWidth="809.0" styleClass="edit-button" stylesheets="@../style.css" />
+            <Button fx:id="choice1" prefHeight="73.0" prefWidth="813.0" styleClass="edit-button" stylesheets="@../style.css" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

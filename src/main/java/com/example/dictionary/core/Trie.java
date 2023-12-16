@@ -34,19 +34,17 @@ public class Trie {
     }
 
     /**
-     * Search for a word in the trie
-     *
-     * @param word the word to be searched
+     * Search for every word that begins with prefix and add to list
      */
-    private static void dfs(Node current, String word) {
+    private static void dfs(Node current, String prefix) {
         // if the current node is the end of the word, add it to the list
         if (current.isEndOfWord) {
-            searchedWords.add(word);
+            searchedWords.add(prefix);
         }
         // for each character in the trie, recursively call dfs
         for (char ch : current.children.keySet()) {
             if (current.children.get(ch) != null) {
-                dfs(current.children.get(ch), word + ch);
+                dfs(current.children.get(ch), prefix + ch);
             }
 
         }
@@ -73,6 +71,8 @@ public class Trie {
             }
             current = current.children.get(ch);
         }
+
+        // Add every word with beginning with `prefix` to the list
         dfs(current, prefix);
         return getSearchedWords();
     }
