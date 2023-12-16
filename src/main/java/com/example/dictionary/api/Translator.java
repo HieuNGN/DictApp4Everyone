@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 public class Translator {
 
     /**
-     * this function is used to translate from English to Vietnamese
+     * Translates input from English to Vietnamese
      *
      * @param text the text to be translated
      * @return the translated text
@@ -48,9 +48,6 @@ public class Translator {
     /**
      * Translate text from `langFrom` to `langTo`.
      *
-     * <p><a
-     * href="https://stackoverflow.com/questions/8147284/how-to-use-google-translate-api-in-my-java-application">Reference</a>
-     *
      * @param langFrom the input language (2 letters (ex: 'en'))
      * @param langTo the output language (2 letters (ex: 'vi'))
      * @param text the text to be translated
@@ -58,7 +55,7 @@ public class Translator {
      */
 
     private static String translate(String langFrom, String langTo, String text) throws IOException {
-        // INSERT YOU URL HERE
+        // Converts into URL
         String urlStr = "https://script.google.com/macros/s/AKfycbwTL4hLzlwwLphia0nkbuu1TpApoPlmGBumYZrmOZnYQ2fAHNniaM38eFKdHI7fbqGaBg/exec" +
                 "?q=" + URLEncoder.encode(text, StandardCharsets.UTF_8) +
                 "&target=" + langTo +
