@@ -2,7 +2,6 @@ package com.example.dictionary;
 
 import com.example.dictionary.core.DatabaseConnection;
 import com.example.dictionary.core.Dictionary;
-import com.example.dictionary.core.History;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -55,7 +54,7 @@ public class Application extends javafx.application.Application {
     }
 
     /**
-     * This method loads the dictionary data from the database.
+     * Loads data from database.
      */
     private void loadDictionary() {
         dictionary = new DatabaseConnection();
@@ -67,5 +66,6 @@ public class Application extends javafx.application.Application {
             System.out.println("Error loading dictionary");
         }
     }
-}
 
+    public static void main(String[] args) { launch(args); }
+}
