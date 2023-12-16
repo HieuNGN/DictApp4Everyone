@@ -17,6 +17,11 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.ui.SearchController">
     <Pane prefHeight="550.0" prefWidth="850.0" styleClass="root" stylesheets="@../style.css">
       <children>
+         <ImageView fitHeight="52.0" fitWidth="38.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../icon/dictionary.png" />
+            </image>
+         </ImageView>
              <Button layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" stylesheets="@../style.css" textFill="WHITE">
             <tooltip>
                <Tooltip text="Search word" />
@@ -59,11 +64,11 @@
          </Button>
          <Pane layoutX="59.0" prefHeight="550.0" prefWidth="792.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;" styleClass="search-box" stylesheets="@../style.css">
             <children>
-                    <TextField fx:id="searchField" layoutX="14.0" layoutY="45.0" onAction="#searchWord" onKeyPressed="#changeFocus" onKeyTyped="#takeSearchList" onMouseClicked="#setClickOnTextField" prefHeight="38.0" prefWidth="522.0" promptText="Search" styleClass="search-box" stylesheets="@../style.css" />
-               <ListView fx:id="listView" layoutX="14.0" layoutY="128.0" onKeyPressed="#selectEnter" onMouseClicked="#selectClick" prefHeight="406.0" prefWidth="264.0" styleClass="list-cell" stylesheets="@../style.css" />
+                    <TextField fx:id="searchField" layoutX="14.0" layoutY="45.0" onAction="#searchWord" onKeyTyped="#getResults" onMouseClicked="#setClickOnTextField" prefHeight="38.0" prefWidth="522.0" promptText="Search" styleClass="search-box" stylesheets="@../style.css" />
+               <ListView fx:id="resultsList" layoutX="14.0" layoutY="128.0" onKeyPressed="#selectEnter" onMouseClicked="#selectClick" prefHeight="406.0" prefWidth="264.0" styleClass="list-cell" stylesheets="@../style.css" />
                <Pane layoutX="289.0" layoutY="128.0" prefHeight="405.0" prefWidth="491.0" styleClass="definition-wrapper" stylesheets="@../style.css">
                   <children>
-                        <WebView fx:id="webView" layoutX="14.0" layoutY="94.0" prefHeight="262.0" prefWidth="469.0" />
+                        <WebView fx:id="definitionView" layoutX="14.0" layoutY="94.0" prefHeight="262.0" prefWidth="469.0" />
                      <Label fx:id="englishWord" layoutX="12.0" layoutY="14.0" prefHeight="72.0" prefWidth="473.0" text="Dictionary" wrapText="true">
                         <font>
                            <Font name="System Bold" size="32.0" />
@@ -98,20 +103,18 @@
                            </ImageView>
                         </graphic>
                      </Button>
-                     <Button layoutX="230.0" layoutY="359.0" mnemonicParsing="false" onAction="#setSynonymButton" prefHeight="33.0" prefWidth="60.0" styleClass="volume-button" stylesheets="@../style.css" textFill="#ef1b1b">
-                        <graphic>
-                           <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                              <image>
-                                 <Image url="@../icons/synonym.png" />
-                              </image>
-                           </ImageView>
-                        </graphic>
-                     </Button>
                   </children>
                </Pane>
             </children>
          </Pane>
          <Button fx:id="exitButton" layoutX="13.0" layoutY="491.0" mnemonicParsing="false" onAction="#setExitButton" prefHeight="45.0" prefWidth="45.0" styleClass="exit-button" stylesheets="@../style.css">
+            <graphic>
+               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../icons/icons8_exit_32px.png" />
+                  </image>
+               </ImageView>
+            </graphic>
             <tooltip>
                <Tooltip text="Exit" />
             </tooltip>
@@ -128,20 +131,6 @@
                </ImageView>
             </graphic>
          </Button>
-         <Button layoutX="-1.0" layoutY="8.0" mnemonicParsing="false" textFill="WHITE">
-            <graphic>
-               <ImageView fitHeight="45.0" fitWidth="45.0">
-                  <image>
-                     <Image url="@../icon/night-mode.png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Button>
-         <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="17.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../icons/icons8_exit_32px.png" />
-            </image>
-         </ImageView>
       </children>
     </Pane>
 </AnchorPane>
